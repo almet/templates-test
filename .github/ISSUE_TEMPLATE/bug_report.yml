@@ -33,13 +33,10 @@ body:
     attributes:
       label: Operating System Version
       description: |
-        Which version of your operating sytem do you use? Be as precise as possible.
+        Which version of your operating sytem do you use?
 
-        How do I know? Follow these links:
-
-        - [Windows](https://learn.microsoft.com/en-us/windows/client-management/client-tools/windows-version-search)
-        - [OSX](https://support.apple.com/en-us/109033)
-        - On Linux, it differs, but you should have good results by looking at /etc/issue
+        - Follow these links to find out the OS version (on [Windows](https://learn.microsoft.com/en-us/windows/client-management/client-tools/windows-version-search), on [OSX](https://support.apple.com/en-us/109033))
+        - On Linux, you should have good results with this command `cat /etc/os-release`
     validations:
       required: true
   - type: textarea
