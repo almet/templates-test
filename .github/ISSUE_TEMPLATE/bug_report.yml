@@ -50,7 +50,12 @@ body:
     id: docker-desktop-version
     attributes:
       label: Docker Desktop version
-      description: On Windows and MacOS, if you're using Docker Desktop, which version is it?
+      description: |
+        On Windows and MacOS, if you're using Docker Desktop, which version is it?
+        Please give us the full output of this command: `docker version --format '{{json .}}'`
+
+        This will be automatically formatted into code, so no need for backticks.
+      render: shell
   - type: textarea
     id: podman-version
     attributes:
