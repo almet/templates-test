@@ -40,14 +40,14 @@ body:
         - [Windows](https://learn.microsoft.com/en-us/windows/client-management/client-tools/windows-version-search)
         - [OSX](https://support.apple.com/en-us/109033)
         - On Linux, it differs, but you should have good results by looking at /etc/issue
-    validation:
+    validations:
       required: true
   - type: textarea
     id: dangerzone-version
     attributes:
       label: Dangerzone version
       description: Which version of Dangerzone are you using?
-    validation:
+    validations:
       required: true
   - type: textarea
     id: docker-desktop-version
