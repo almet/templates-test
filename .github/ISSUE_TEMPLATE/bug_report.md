@@ -1,31 +1,67 @@
----
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: bug
-assignees: ''
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: ["freedomofpress/dangerzone"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: os-name
+    attributes:
+      label: OS Name
+      description: Which Operating System are you using?
+      options:
+        - Windows
+        - MacOS
+        - Linux
+    validations:
+      required: true
+  - type: textarea
+    id: os-version
+    attributes:
+      label: Operating System Version
+      description: |
+        Which version of your operating sytem do you use? Be as precise as possible.
 
----
+        How do I know? Follow these links:
 
-**Describe the bug**
-A clear and concise description of what the bug is.
-
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
-
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Desktop (please complete the following information):**
- - OS: [e.g. OSX]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+        - [Windows](https://learn.microsoft.com/en-us/windows/client-management/client-tools/windows-version-search)
+        - [OSX](https://support.apple.com/en-us/109033)
+        - On Linux, it differs, but you should have good results by looking at /etc/issue
+    validation:
+      required: true
+  - type: textarea
+    id: dangerzone-version
+    attributes:
+      label: Dangerzone version
+      description: Which version of Dangerzone are you using?
+    validation:
+      required: true
+  - type: textarea
+    id: docker-desktop-version
+    attributes:
+      label: Docker Desktop version
+      description: On Windows and MacOS, if you're using Docker Desktop, which version is it?
+  - type: textarea
+    id: podman-version
+    attributes:
+      label: Podman version
+      description: On Linux, which version of docker are you using?
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
